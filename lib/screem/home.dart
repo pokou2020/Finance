@@ -1,3 +1,4 @@
+import 'package:finance/screem/StatistiquePage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -83,7 +84,7 @@ class _HomeState extends State<Home> {
                         style: TextStyle(color: Colors.grey),
                       ),
                       const Text(
-                        "£9483.00",
+                        "£474215",
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 37),
                       ),
@@ -798,7 +799,9 @@ class _HomeState extends State<Home> {
             ],
           ),
         ),
+      
       ),
+      
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -839,7 +842,10 @@ class _HomeState extends State<Home> {
                   size: 25,
                 ),
               ),
-              onPressed: () {}),
+              onPressed: () {
+  Navigator.push(context, MaterialPageRoute(builder: (Context)=>Statistiquepage()));
+
+              }),
           FloatingActionButton(
               backgroundColor: Colors.white,
               shape: RoundedRectangleBorder(
@@ -895,6 +901,42 @@ class _HomeState extends State<Home> {
               )),
         ],
       ),
+      // bottomNavigationBar: Container(
+      //   height:  MediaQuery.of(context).size.width*.155,
+      
+      //   margin: EdgeInsets.all(20),
+      //   decoration: BoxDecoration(
+      //     borderRadius: BorderRadius.circular(50),
+      //      color: Colors.white,
+      //      boxShadow: [
+      //             BoxShadow(
+      //               color: Colors.black.withOpacity(.15),
+      //               blurRadius: 30,
+      //               offset: Offset(0, 10)
+      //             )
+      //           ],
+      //   ),
+      //   // child: Row(
+      //   //   children: [
+      //   //     Container(
+      //   //       height: 50,
+      //   //       width: 50,
+      //   //       decoration: BoxDecoration(
+      //   //         boxShadow: [
+      //   //           BoxShadow(
+      //   //             color: Colors.black.withOpacity(.15),
+      //   //             blurRadius: 30,
+      //   //             offset: Offset(0, 10)
+      //   //           )
+      //   //         ],
+      //   //         color: Colors.white,
+      //   //         shape: BoxShape.circle
+      //   //       ),
+              
+      //   //     ),
+      //   //   ],
+      //   // ),
+      // ),
     );
   }
 }
