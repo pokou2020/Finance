@@ -59,107 +59,176 @@ class _StatistiquepageState extends State<Statistiquepage> {
                     ],
                   )),
                   Expanded(
-                    flex: 2,
+                    flex: 3,
                     child: Container(
-                    height: MediaQuery.of(context).size.height/2,
+              
                     width: MediaQuery.of(context).size.width,
+                    
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10)
                     ),
-                    child: AspectRatio(
-                     
-                      aspectRatio:1,
-                      child:  BarChart(
-                        BarChartData(
-                           
-                         titlesData: FlTitlesData(
-                          show: true,
-                          leftTitles: AxisTitles(
-                            sideTitles: SideTitles(showTitles: false)
+                    child: Column(
+                      children: [
+                        Container(height: 50,
+                        width: MediaQuery.of(context).size.width,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 8.0, right: 8),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    height: 35,
+                                    width: 90,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      border: Border.all(width: 1,color: Colors.grey)
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                      children: [
+                                        Container(
+                                          child: Text("Expenses"),
+                                          
+                                        ),
+                                        
+                                        Icon(Icons.arrow_drop_down)
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                                     Row(
+                                    
+                                children: [
+                                  Text("Day",
+                                  style: TextStyle(
+                                    color: Colors.grey
+                                  ),
+                                  ),
+                                  SizedBox(width: 10,),
+                                  Container(
+                                    height: 35,
+                                    width: 70,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      border: Border.all(width: 1,color: Colors.grey)
+                                    ),
+                                    child:      Center(child: Text("Week")),
+                                  ),
+                                  SizedBox(width: 10,),
+                                  Text("Month",
+                                  style: TextStyle(
+                                    color: Colors.grey
+                                  ),
+                                  ),
+                                ],
+                              )
+                            ],
                           ),
-                           topTitles: AxisTitles(
-                            sideTitles: SideTitles(showTitles: false)
-                          ),
-                           rightTitles: AxisTitles(
-                            sideTitles: SideTitles(showTitles: false)
-                          )
-                         ),
-                          borderData: FlBorderData(
-                            show: false,
-                          
-                          ),
-                        
-                          barGroups: [
-                              BarChartGroupData(x: 1,
-                            barRods: [
-                              BarChartRodData(toY: 30,
-                              color: Color.fromARGB(255, 41, 128, 241),
-                              width: 25,
-                              borderRadius: BorderRadius.circular(5)
-                              )
-                            ]
-                            ),
-                              BarChartGroupData(x: 2,
-                            barRods: [
-                              BarChartRodData(toY: 25,
-                              color: const Color.fromARGB(255, 233, 30, 182),
-                              width: 25,
-                              borderRadius: BorderRadius.circular(5)
-                              )
-                            ]
-                            ),
-                              BarChartGroupData(x: 3,
-                            barRods: [
-                              BarChartRodData(toY: 30,
-                              color: Color.fromARGB(255, 41, 128, 241),
-                              width: 25,
-                              borderRadius: BorderRadius.circular(5)
-                              )
-                            ]
-                            ),
-                              BarChartGroupData(x: 4,
-                            barRods: [
-                              BarChartRodData(toY: 45,
-                              color: const Color.fromARGB(255, 233, 30, 182),
-                              width: 25,
-                              borderRadius: BorderRadius.circular(5)
-                              )
-                            ]
-                            ),
-                              BarChartGroupData(x: 5,
-                            barRods: [
-                              BarChartRodData(toY: 15,
-                            color: Color.fromARGB(255, 41, 128, 241),
-                              width: 25,
-                              borderRadius: BorderRadius.circular(5)
-                              )
-                            ]
-                            ),
-                            BarChartGroupData(x: 6,
-                            barRods: [
-                              BarChartRodData(toY: 18,
-                            color: const Color.fromARGB(255, 233, 30, 182),
-                              width: 25,
-                              borderRadius: BorderRadius.circular(5)
-                              )
-                            ]
-                            ),
-                                  BarChartGroupData(x: 7,
-                            barRods: [
-                              BarChartRodData(
-                                fromY: 0,
-                                toY: 33,
-                       color: Color.fromARGB(255, 41, 128, 241),
-                              width: 25,
-                              
-                              borderRadius: BorderRadius.circular(5)
-                              )
-                            ]
-                            )
-                          ]
-                        )),
                         ),
+                        ),
+                        Container(
+                          height: MediaQuery.of(context).size.height/3,
+                          width: MediaQuery.of(context).size.width,
+                          child: AspectRatio(
+                           
+                            aspectRatio:1,
+                            child:  BarChart(
+                              BarChartData(
+                                 
+                               titlesData: FlTitlesData(
+                                show: true,
+                                leftTitles: AxisTitles(
+                                  sideTitles: SideTitles(showTitles: false)
+                                ),
+                                 topTitles: AxisTitles(
+                                  sideTitles: SideTitles(showTitles: false)
+                                ),
+                                 rightTitles: AxisTitles(
+                                  sideTitles: SideTitles(showTitles: false)
+                                )
+                               ),
+                                borderData: FlBorderData(
+                                  show: false,
+                                
+                                ),
+                              
+                                barGroups: [
+                                    BarChartGroupData(x: 1,
+                                  barRods: [
+                                    BarChartRodData(toY: 30,
+                                    color: Color.fromARGB(255, 41, 128, 241),
+                                    width: 25,
+                                    borderRadius: BorderRadius.circular(5)
+                                    )
+                                  ]
+                                  ),
+                                    BarChartGroupData(x: 2,
+                                  barRods: [
+                                    BarChartRodData(toY: 25,
+                                    color: const Color.fromARGB(255, 233, 30, 182),
+                                    width: 25,
+                                    borderRadius: BorderRadius.circular(5)
+                                    )
+                                  ]
+                                  ),
+                                    BarChartGroupData(x: 3,
+                                  barRods: [
+                                    BarChartRodData(toY: 30,
+                                    color: Color.fromARGB(255, 41, 128, 241),
+                                    width: 25,
+                                    borderRadius: BorderRadius.circular(5)
+                                    )
+                                  ]
+                                  ),
+                                    BarChartGroupData(x: 4,
+                                  barRods: [
+                                    BarChartRodData(toY: 45,
+                                    color: const Color.fromARGB(255, 233, 30, 182),
+                                    width: 25,
+                                    borderRadius: BorderRadius.circular(5)
+                                    )
+                                  ]
+                                  ),
+                                    BarChartGroupData(x: 5,
+                                  barRods: [
+                                    BarChartRodData(toY: 15,
+                                  color: Color.fromARGB(255, 41, 128, 241),
+                                    width: 25,
+                                    borderRadius: BorderRadius.circular(5)
+                                    )
+                                  ]
+                                  ),
+                                  BarChartGroupData(x: 6,
+                                  barRods: [
+                                    BarChartRodData(toY: 18,
+                                  color: const Color.fromARGB(255, 233, 30, 182),
+                                    width: 25,
+                                    borderRadius: BorderRadius.circular(5)
+                                    )
+                                  ]
+                                  ),
+                                        BarChartGroupData(x: 7,
+                                  barRods: [
+                                    BarChartRodData(
+                                      fromY: 0,
+                                      toY: 33,
+                             color: Color.fromARGB(255, 41, 128, 241),
+                                    width: 25,
+                                    
+                                    borderRadius: BorderRadius.circular(5)
+                                    )
+                                  ]
+                                  )
+                                ]
+                              )),
+                              ),
+                        ),
+                      ],
+                    ),
                   )),
                             Expanded(
                   flex: 3,
