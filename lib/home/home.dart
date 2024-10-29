@@ -1,4 +1,4 @@
-import 'package:finance/screem/StatistiquePage.dart';
+import 'package:finance/statistics/pages/statistic_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -843,7 +843,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
               onPressed: () {
-  Navigator.push(context, MaterialPageRoute(builder: (Context)=>Statistiquepage()));
+  Navigator.push(context, MaterialPageRoute(builder: (Context)=>StatisticPage()));
 
               }),
           FloatingActionButton(
