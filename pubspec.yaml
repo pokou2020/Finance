@@ -10,13 +10,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  fl_chart: ^0.69.0
-  gap: 
-  sizer: ^2.0.15 
+ 
 
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
+  fl_chart: ^0.69.0  
   cupertino_icons: ^1.0.6
   sizer: ^3.0.0
   gap: ^3.0.1

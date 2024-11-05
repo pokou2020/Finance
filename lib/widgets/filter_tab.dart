@@ -1,5 +1,5 @@
-import 'package:finance/screem/pages/StatistiquePage.dart';
-import 'package:finance/screem/pages/home_page.dart';
+import 'package:finance/statistics/pages/home_page.dart';
+import 'package:finance/statistics/pages/statistic_page.dart';
 import 'package:flutter/material.dart';
 
 class FilterTab extends StatefulWidget {
@@ -34,7 +34,7 @@ class _FilterTabState extends State<FilterTab> {
                 ),
               ),
               onPressed: () {
-                 Navigator.push(context, MaterialPageRoute(builder: (Context)=>Home()));
+                 Navigator.push(context, MaterialPageRoute(builder: (Context)=>HomePage()));
               }),
           FloatingActionButton(
               backgroundColor: Colors.white,
@@ -54,7 +54,7 @@ class _FilterTabState extends State<FilterTab> {
                 ),
               ),
               onPressed: () {
-  Navigator.push(context, MaterialPageRoute(builder: (Context)=>Statistiquepage()));
+  Navigator.push(context, MaterialPageRoute(builder: (Context)=>StatisticPage()));
 
               }),
           FloatingActionButton(

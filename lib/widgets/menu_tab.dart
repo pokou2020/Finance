@@ -12,8 +12,8 @@ class MenuTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return          Container(
-                            height: 18.w,
-                            width: 18.w,
+                            height: 22.w,
+                            width: 22.w,
                             decoration: const BoxDecoration(
                                 color: Colors.white, shape: BoxShape.circle),
                             child:  Column(

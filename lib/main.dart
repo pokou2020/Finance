@@ -1,4 +1,4 @@
-import 'package:finance/home/pages/home_page.dart';
+import 'package:finance/statistics/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
@@ -11,31 +11,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Sizer(builder: (context, orientation, deviceType)  {
-          return MaterialApp(
-        title: 'Flutter Demo',
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
-        home: Home(),
-      );
-      });
    
-    // return ResponsiveSizer(
-    //   builder: (context, orientation, type) {
-    //     return MaterialApp(
-    //       title: 'Flutter Demo',
-    //       debugShowCheckedModeBanner: false,
-    //       theme: ThemeData(
-    //         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-    //         useMaterial3: true,
-    //       ),
-    //       home: const HomePage(),
-    //     );
-    //   }
-    // );
+    return ResponsiveSizer(
+      builder: (context, orientation, type) {
+        return MaterialApp(
+          title: 'Flutter Demo',
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+            useMaterial3: true,
+          ),
+          home: const HomePage(),
+        );
+      }
+    );
   }
 }
 

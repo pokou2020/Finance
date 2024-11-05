@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:sizer/sizer.dart';
 
 class RecentReipient extends StatelessWidget {
@@ -29,9 +30,7 @@ class RecentReipient extends StatelessWidget {
               maxRadius: 25,
               backgroundImage: AssetImage(imagePersonne),
             ),
-            SizedBox(
-              height: 2.h,
-            ),
+           Gap(10.w),
             Text(
               nomPersonne,
               style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold),
