@@ -1,5 +1,7 @@
-import 'package:finance/screem/widgets/filter_tab.dart';
-import 'package:finance/screem/widgets/recente_transaction.dart';
+
+import 'package:finance/widgets/filter_tab.dart';
+import 'package:finance/widgets/recente_transaction.dart';
+
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
